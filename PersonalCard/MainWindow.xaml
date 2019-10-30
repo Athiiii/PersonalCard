@@ -1,0 +1,77 @@
+﻿<Window x:Class="PersonalCard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonalCard"
+        mc:Ignorable="d"
+        Title="Personal Cards" Height="500" Width="400">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Vertical" Name="CardContainer" HorizontalAlignment="Left">
+            <Border 
+                Background="GhostWhite" 
+                BorderBrush="Gainsboro" 
+                BorderThickness="1"  
+                Height="150px" 
+                Width="300px" 
+                Margin="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Anna Lisa" FontWeight="Bold" FontSize="13" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"/>
+                    <Label Content="435 432 23 45" Grid.Column="1" Grid.Row="2" FontSize="10"/>
+                    <Label Content="anna.lisa@foo.bar" Grid.Column="1" Grid.Row="3" FontSize="10"/>
+                    <Label Grid.Column="1" Grid.Row="5" FontSize="10">
+                        <TextBlock>
+                            Meisterschaftsstrasse 14 <LineBreak/>
+                            123-455 Lorem ipsum <LineBreak/>
+                            SwissSwissistan
+                        </TextBlock>
+                    </Label>
+                    <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Margin="5" Source="assets/Anna.jpg" />
+                </Grid>
+            </Border>
+            <Border 
+                Background="GhostWhite" 
+                BorderBrush="Gainsboro" 
+                BorderThickness="1"  
+                Margin="10"
+                Height="150"
+                Width="300">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Bastian Vogel" FontWeight="Bold" FontSize="13" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"/>
+                    <Label Content="442 124 33 67" Grid.Column="1" Grid.Row="2" FontSize="10"/>
+                    <Label Content="bastian-vogel@foo.bar" Grid.Column="1" Grid.Row="3" FontSize="10"/>
+                    <Label Grid.Column="1" Grid.Row="5" FontSize="10">
+                        <TextBlock>
+                            Superduperstrasse 15 <LineBreak/>
+                            123-455 Lorem sam <LineBreak/>
+                            SwissSwissistan
+                        </TextBlock>
+                    </Label>
+                    <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Margin="5" Source="assets/Bastian.jpg" />
+                </Grid>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
